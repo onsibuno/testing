@@ -1,8 +1,8 @@
 describe('register', () => {
   it('addUser', () => {
-    cy.visit('http://localhost/github_testing/addUser')
-    cy.get('input[name="nom"]').type('DOE')
-    cy.get('input[name="prenom"]').type('John')
+    cy.visit('https://testing.adrardev.fr/addUser')
+    cy.get('input[name="nom"]').type('Rocher')
+    cy.get('input[name="prenom"]').type('Jean-Pierre')
     cy.get('input[name="mail"]').type(Math.random().toString(36).substring(2, 15) + '@gmail.com')
     cy.get('input[name="mdp"]').type('!P4sSw0rD!')
     cy.get('input[type="submit"]').click()
@@ -11,7 +11,7 @@ describe('register', () => {
       const name = 'addUser';
       let date = new Date()
       date = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
-      const url = "http://localhost/github_testing/api/addTest"
+      const url = "https://testing.adrardev.fr/api/addTest"
       let json = '';
       if (text == "Le compte a été ajouté en BDD") {
         const valid = true
