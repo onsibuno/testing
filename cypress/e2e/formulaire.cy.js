@@ -1,7 +1,7 @@
 describe('register', () => {
   it('addUser', () => {
     cy.visit('https://testing.adrardev.fr/addUser')
-    cy.get('input[name="nom"]').type('Rocher')
+    cy.get('input[name="nom"]').type('caillou Rocher')
     cy.get('input[name="prenom"]').type('Jean-Pierre')
     cy.get('input[name="mail"]').type(Math.random().toString(36).substring(2, 15) + '@gmail.com')
     cy.get('input[name="mdp"]').type('!P4sSw0rD!')
